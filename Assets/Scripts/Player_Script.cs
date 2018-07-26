@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Script : MonoBehaviour {
+    //number of lives
     public int lives;
 
     private void Start()
     {
+        //starts at 3
         lives = 3; 
     }
     // Use this for initialization
@@ -18,6 +20,7 @@ public class Player_Script : MonoBehaviour {
             Time.timeScale = 0;
             Application.Quit();
         }
+        //move the player left and right
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -28,10 +31,10 @@ public class Player_Script : MonoBehaviour {
             }
         }
     }
-    //if collide with falling objects
+    //if collide with triangle, lose a life
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "triangle")
+        if (collision.gameObject.name == "triangle(Clone)")
         {
             lives--;
         }

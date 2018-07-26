@@ -237,6 +237,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Falling_Object_Script.cs" />
     <Compile Include="Assets\Scripts\Player_Script.cs" />
+    <Compile Include="Assets\Scripts\Random_Object_Script.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
