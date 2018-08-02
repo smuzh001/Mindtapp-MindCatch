@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Script : MonoBehaviour {
-    //number of lives
-    public int lives;
+    //declare
+    public int lives, score;
+    public GameObject heart1, heart2, heart3;
+    public Text CountText;
 
     private void Start()
     {
         //starts at 3
-        lives = 3; 
+        lives = 3;
+        //score starts at 0
+        score = 0;
     }
     // Use this for initialization
     void Update()
@@ -38,5 +43,48 @@ public class Player_Script : MonoBehaviour {
         {
             lives--;
         }
+        else if(collision.gameObject.name == "Circle(Clone)")
+        {
+            score++;
+            SetScore();
+        }
+        else
+        {
+            Debug.Log("Problem with Scoring");
+        }
+
+        //Display hearts. CHANGE LATER TO OPTIMIZE BUT NEED ACTUAL SIZE OF HEARTS
+        if(lives == 3)
+        {
+            heart1.SetActive(true);
+            heart2.SetActive(true);
+            heart3.SetActive(true);
+        }
+        else if(lives == 2)
+        {
+            heart1.SetActive(true);
+            heart2.SetActive(true);
+            heart3.SetActive(false);
+        }
+        else if(lives == 1)
+        {
+            heart1.SetActive(true);
+            heart2.SetActive(false);
+            heart3.SetActive(false);
+        }
+        else if(lives == 0)
+        {
+            heart1.SetActive(false);
+            heart2.SetActive(false);
+            heart3.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("error with lives");
+        }
+    }
+    private void SetScore()
+    {
+        CountText.text = "Score: " + score.ToString();
     }
 }
