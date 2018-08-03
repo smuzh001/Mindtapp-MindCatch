@@ -5,11 +5,11 @@ using UnityEngine;
 public class Player_Script : MonoBehaviour {
     //number of lives
     public int lives;
-
+    public int maxlives = 5;
     private void Start()
-    {
+    {   
         //starts at 3
-        lives = 3; 
+        lives = maxlives;    
     }
     // Use this for initialization
     void Update()
