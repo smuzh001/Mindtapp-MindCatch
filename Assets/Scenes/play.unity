@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 22935924}
   - component: {fileID: 22935923}
   - component: {fileID: 22935922}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 138163960}
   - component: {fileID: 138163962}
   - component: {fileID: 138163961}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 281169070}
   - component: {fileID: 281169072}
   - component: {fileID: 281169071}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 660588111}
   - component: {fileID: 660588113}
   - component: {fileID: 660588112}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694332652}
   - component: {fileID: 694332653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: heart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,6 +566,10 @@ Prefab:
       propertyPath: CountText
       value: 
       objectReference: {fileID: 1757234077}
+    - target: {fileID: 1450240297926324, guid: c346e0226308590408e0e59f3c5fbfd3, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c346e0226308590408e0e59f3c5fbfd3, type: 2}
   m_IsPrefabParent: 0
@@ -579,7 +583,7 @@ GameObject:
   - component: {fileID: 815765052}
   - component: {fileID: 815765054}
   - component: {fileID: 815765053}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +660,7 @@ GameObject:
   - component: {fileID: 1074364733}
   - component: {fileID: 1074364732}
   - component: {fileID: 1074364731}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,7 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1195341485}
   - component: {fileID: 1195341486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +854,7 @@ GameObject:
   - component: {fileID: 1209207349}
   - component: {fileID: 1209207351}
   - component: {fileID: 1209207350}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,7 +929,7 @@ GameObject:
   - component: {fileID: 1224802147}
   - component: {fileID: 1224802146}
   - component: {fileID: 1224802145}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1048,7 +1052,7 @@ GameObject:
   - component: {fileID: 1248665604}
   - component: {fileID: 1248665603}
   - component: {fileID: 1248665607}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1131,6 +1135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseUI: {fileID: 1808707913}
+  PauseButton: {fileID: 1074364729}
 --- !u!1 &1321061088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1147,7 @@ GameObject:
   - component: {fileID: 1321061092}
   - component: {fileID: 1321061091}
   - component: {fileID: 1321061090}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Restart Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1267,7 +1272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1456306994}
   - component: {fileID: 1456306995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: heart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1340,7 +1345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617100282}
   - component: {fileID: 1617100281}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ObjectSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1447,7 +1452,7 @@ GameObject:
   - component: {fileID: 1757234076}
   - component: {fileID: 1757234078}
   - component: {fileID: 1757234077}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1522,7 +1527,7 @@ GameObject:
   - component: {fileID: 1777025025}
   - component: {fileID: 1777025024}
   - component: {fileID: 1777025023}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Resume Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.75, g: 0.75, b: 0.75, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1644,13 +1649,13 @@ GameObject:
   - component: {fileID: 1808707916}
   - component: {fileID: 1808707915}
   - component: {fileID: 1808707918}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: PauseUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1808707914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1685,7 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.387}
+  m_Color: {r: 0.19215688, g: 0.19215688, b: 0.19215688, a: 0.478}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:

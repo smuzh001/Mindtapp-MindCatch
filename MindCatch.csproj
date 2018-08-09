@@ -236,6 +236,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Falling_Object_Script.cs" />
+    <Compile Include="Assets\Scripts\MainMenu_Script.cs" />
     <Compile Include="Assets\Scripts\Pause_Menu_Script.cs" />
     <Compile Include="Assets\Scripts\Player_Script.cs" />
     <Compile Include="Assets\Scripts\Random_Object_Script.cs" />

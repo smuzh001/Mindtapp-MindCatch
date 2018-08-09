@@ -7,6 +7,7 @@ public class Pause_Menu_Script : MonoBehaviour {
     //This GameObject PauseUI will represent the actual object of the Menu.   
     public GameObject PauseUI;
     private bool GamePaused = false;
+    public GameObject PauseButton;
 
 
 	// Use this for initialization
@@ -18,6 +19,7 @@ public class Pause_Menu_Script : MonoBehaviour {
 	
 	public void PauseGame () {
         //make pause button disappear and make pause screen appear
+        PauseButton.gameObject.SetActive(false);
         PauseUI.SetActive(true);
         Time.timeScale = 0;
 	}
@@ -25,6 +27,7 @@ public class Pause_Menu_Script : MonoBehaviour {
     //resumes the game
     public void Resume_Game(){
         //make pause button reappear and pause screen disappear
+        PauseButton.gameObject.SetActive(true);
         PauseUI.SetActive(false);
         Time.timeScale = 1;
     }
@@ -38,8 +41,7 @@ public class Pause_Menu_Script : MonoBehaviour {
 
     public void Quit() {
         //loads the first scene which should be our Main Menu.
-        //Application.LoadLevel(1);
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     } 
 }
 
