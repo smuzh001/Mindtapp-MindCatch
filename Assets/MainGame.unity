@@ -353,6 +353,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
+  score: 0
+  heart1: {fileID: 0}
+  heart2: {fileID: 0}
+  heart3: {fileID: 0}
+  CountText: {fileID: 0}
 --- !u!212 &1420151652
 SpriteRenderer:
   m_ObjectHideFlags: 0
