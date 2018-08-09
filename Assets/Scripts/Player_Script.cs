@@ -8,6 +8,7 @@ public class Player_Script : MonoBehaviour {
     public int lives, score;
     public GameObject heart1, heart2, heart3;
     public Text CountText;
+    public Pause_Menu_Script GetScript;
 
     private void Start()
     {
@@ -15,15 +16,18 @@ public class Player_Script : MonoBehaviour {
         lives = 3;
         //score starts at 0
         score = 0;
+        //create reference to Pause_Menu_Script so we can access its functions
+        GetScript = FindObjectOfType<Pause_Menu_Script>();
+
     }
     // Use this for initialization
     void Update()
     {
-        //gameover
-        if(lives == 0)
+        //run out of lives
+        if (lives == 0)
         {
-            Time.timeScale = 0;
-            Application.Quit();
+            //call the function of Pause_Menu_Script
+            GetScript.GameOver();
         }
         //move the player left and right
         if (Input.touchCount > 0)

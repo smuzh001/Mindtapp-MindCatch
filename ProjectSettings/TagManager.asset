@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - PauseMenu
-  - FallingObjects
+  - Falling
   - 
   - 
   - 
@@ -41,9 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Pause
-    uniqueID: 1836348875
-    locked: 0
-  - name: FallingObjects
+  - name: Falling
     uniqueID: 4090981959
+    locked: 0
+  - name: PauseMenu
+    uniqueID: 1836348875
     locked: 0
