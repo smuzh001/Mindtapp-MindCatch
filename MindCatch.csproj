@@ -239,6 +239,7 @@
     <Compile Include="Assets\Scripts\MainMenu_Script.cs" />
     <Compile Include="Assets\Scripts\Pause_Menu_Script.cs" />
     <Compile Include="Assets\Scripts\Player_Script.cs" />
+    <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
     <Compile Include="Assets\Scripts\Random_Object_Script.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

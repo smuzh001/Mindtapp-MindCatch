@@ -6,26 +6,54 @@ using UnityEngine.UI;
 public class Player_Script : MonoBehaviour {
     //declare
     public int lives, score;
+    public int[] highscores = new int[5];
     public GameObject heart1, heart2, heart3;
     public Text CountText;
     public Pause_Menu_Script GetScript;
 
     private void Start()
     {
+        enabled = true;
+        //get the list of high scores
+        for(int i = 0;i < 5;i++)
+        {
+            highscores[i] = PlayerPrefs.GetInt("highscore" + i);
+        }
+  
         //starts at 3
         lives = 3;
         //score starts at 0
         score = 0;
         //create reference to Pause_Menu_Script so we can access its functions
         GetScript = FindObjectOfType<Pause_Menu_Script>();
-
     }
-    // Use this for initialization
+    
     void Update()
     {
         //run out of lives
         if (lives == 0)
         {
+            //check to see if it is a high score
+            for(int i = 0;i < 5;i++)
+            {
+                if(score > highscores[i])
+                {
+                    for(int j = 4;j > i;j--)
+                    {
+                        highscores[j] = highscores[j - 1];
+                    }
+                    highscores[i] = score;
+                    break;
+                }
+            }
+            //store into playerpref
+            for(int k = 0;k < 4;k++)
+            {
+                PlayerPrefs.SetInt("highscore" + k, highscores[k]);
+            }
+
+            //stop updating
+            enabled = false;
             //call the function of Pause_Menu_Script
             GetScript.GameOver();
         }
