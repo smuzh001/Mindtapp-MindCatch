@@ -10,6 +10,11 @@ public class Player_Script : MonoBehaviour {
     public GameObject heart1, heart2, heart3;
     public Text CountText;
     public Pause_Menu_Script GetScript;
+    [System.Serializable]
+    public class myScores
+    {
+        public int score;
+    }
 
     private void Start()
     {
@@ -51,6 +56,11 @@ public class Player_Script : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("highscore" + k, highscores[k]);
             }
+
+            //store in JSON file to analyze
+            myScores myScore = new myScores();
+            myScore.score = score;
+            string json = JsonUtility.ToJson(myScore);
 
             //stop updating
             enabled = false;
