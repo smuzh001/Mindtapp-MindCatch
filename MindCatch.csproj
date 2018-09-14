@@ -233,13 +233,132 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>Assets/Plugins/RestSharp/RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Falling_Object_Script.cs" />
-    <Compile Include="Assets\Scripts\MainMenu_Script.cs" />
-    <Compile Include="Assets\Scripts\Pause_Menu_Script.cs" />
-    <Compile Include="Assets\Scripts\Player_Script.cs" />
-    <Compile Include="Assets\Scripts\Random_Object_Script.cs" />
+    <ProjectReference Include="MindCatch.Plugins.csproj">
+      <Project>{9630E1F8-ACF3-C7E8-4B61-DA5D9210E6AC}</Project>
+      <Name>MindCatch.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Framework\Scripts\Animation\Dissapear.cs" />
+    <Compile Include="Assets\Framework\Scripts\Data\DataUtility.cs" />
+    <Compile Include="Assets\Framework\Scripts\Data\MindtappAnalytics.cs" />
+    <Compile Include="Assets\Framework\Scripts\Data\Session.cs" />
+    <Compile Include="Assets\Framework\Scripts\Data\TestAnalytics.cs" />
+    <Compile Include="Assets\Framework\Scripts\Game\Countdown.cs" />
+    <Compile Include="Assets\Framework\Scripts\Game\DisplayScores.cs" />
+    <Compile Include="Assets\Framework\Scripts\Game\ILives.cs" />
+    <Compile Include="Assets\Framework\Scripts\Game\Scoreboard.cs" />
+    <Compile Include="Assets\Framework\Scripts\Game\ScoreTracker.cs" />
+    <Compile Include="Assets\Framework\Scripts\Game\TextLives.cs" />
+    <Compile Include="Assets\Framework\Scripts\Game\VisualLives.cs" />
+    <Compile Include="Assets\Framework\Scripts\Game\Wait.cs" />
+    <Compile Include="Assets\Framework\Scripts\IFT\HardcodedPhotos.cs" />
+    <Compile Include="Assets\Framework\Scripts\IFT\IPhotos.cs" />
+    <Compile Include="Assets\Framework\Scripts\IFT\IWordlist.cs" />
+    <Compile Include="Assets\Framework\Scripts\IFT\LocalWordlist.cs" />
+    <Compile Include="Assets\Framework\Scripts\IFT\RemoteWordlist.cs" />
+    <Compile Include="Assets\Framework\Scripts\UI\Touchable.cs" />
+    <Compile Include="Assets\Framework\Scripts\Utilities\GoUtility.cs" />
+    <Compile Include="Assets\Framework\Scripts\Utilities\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Framework\Scripts\Utilities\QuitOnClick.cs" />
+    <Compile Include="Assets\Framework\Scripts\Utilities\RandomList.cs" />
+    <Compile Include="Assets\Framework\Scripts\Utilities\ShuffleUtility.cs" />
+    <Compile Include="Assets\Framework\Scripts\Utilities\Singleton.cs" />
+    <Compile Include="Assets\Framework\Scripts\Utilities\TransformUtility.cs" />
+    <Compile Include="Assets\Framework\Scripts\Zenject\VersionSettingsInstaller.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendBusinessEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendDesignEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendErrorEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendProgressionEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendResourceEvent.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetBirthYear.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetCustomDimension.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetFacebookID.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetGender.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Enums.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Business.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Debug.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Design.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Error.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Progression.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Resource.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Setup.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_SpecialEvents.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GAValidator.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\GameAnalytics.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Setup\Settings.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\State\GAState.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Utilities\GA_MiniJson.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_AndroidWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_iOSWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_MonoWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_TizenWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_tvOSWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_WebGLWrapper.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_Wrapper.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraShot.cs" />
+    <Compile Include="Assets\Scripts\Camera\DeviceCamera.cs" />
+    <Compile Include="Assets\Scripts\Camera\OrientateCameraIcons.cs" />
+    <Compile Include="Assets\Scripts\Camera\OrientateVirtualCamera.cs" />
+    <Compile Include="Assets\Scripts\Camera\PreviewPhoto.cs" />
+    <Compile Include="Assets\Scripts\Gallery\PhotosScreen.cs" />
+    <Compile Include="Assets\Scripts\Gallery\Thumbnail.cs" />
+    <Compile Include="Assets\Scripts\Gallery\ThumbnailManager.cs" />
+    <Compile Include="Assets\Scripts\Gallery\TransitionModes.cs" />
+    <Compile Include="Assets\Scripts\IPhoto\EditWords.cs" />
+    <Compile Include="Assets\Scripts\IPhoto\NameGallery.cs" />
+    <Compile Include="Assets\Scripts\IPhoto\PhotoGallery.cs" />
+    <Compile Include="Assets\Scripts\Play\Falling_Object_Script.cs" />
+    <Compile Include="Assets\Scripts\Play\MainMenu_Script.cs" />
+    <Compile Include="Assets\Scripts\Play\Pause_Menu_Script.cs" />
+    <Compile Include="Assets\Scripts\Play\Player_Script.cs" />
+    <Compile Include="Assets\Scripts\Play\Random_Object_Script.cs" />
+    <Compile Include="Assets\Scripts\StorePhoto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\GameAnalytics\Readme.txt" />
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\JsonDotNet\Assemblies\AOT\Newtonsoft.Json.XML" />
+    <None Include="Assets\Plugins\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.XML" />
+    <None Include="Assets\Plugins\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.XML" />
+    <None Include="Assets\Plugins\JsonDotNet\link.xml" />
+    <None Include="Assets\Plugins\Zenject\LICENSE.txt" />
+    <None Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Media\Fonts\Space.txt" />
+    <None Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Media\Imported\Shaders\AddSmooth_Layer.shader" />
+    <None Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Media\Imported\Shaders\Add_Layer.shader" />
+    <None Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Media\Imported\Shaders\Particle Alpha Blend_IgnoreFog.shader" />
+    <None Include="Assets\Plugins\Zenject\Version.txt" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\SoftMaskShader.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle Add.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle AddMultiply.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle AddSmooth.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle Alpha Blend.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle Blend.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle Multiply.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle MultiplyDouble.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle Premultiply Blend.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle VertexLit Blended.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UIAdditive.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UIImageCrop.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UILinearDodge.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UIMultiply.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UIParticleHidden.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UIScreen.shader" />
+    <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UISoftAdditive.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

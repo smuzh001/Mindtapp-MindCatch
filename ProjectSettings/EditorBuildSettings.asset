@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/play.unity
     guid: 30489229dc9c056468bba60e1042c027
+  - enabled: 1
+    path: Assets/Scenes/Camera.unity
+    guid: bcacb5cb5cc4dd14fafcbebe0f20b646
+  - enabled: 1
+    path: Assets/Scenes/Thumbnails.unity
+    guid: f4c1502bcb48fca41a9c4037fe086cb7
