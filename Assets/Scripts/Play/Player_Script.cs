@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class Player_Script : MonoBehaviour {
     //declare
-    public int lives, score;
+    public int lives, score, seconds;
+    public float timer;
     public int[] highscores = new int[5];
     public GameObject heart1, heart2, heart3;
-    public Text CountText;
+    public Text CountText,TimerText;
     public Pause_Menu_Script GetScript;
-    [System.Serializable]
-    public class myScores
-    {
-        public int score;
-    }
 
     private void Start()
     {
@@ -35,11 +31,20 @@ public class Player_Script : MonoBehaviour {
     
     void Update()
     {
+        //timer. Convert to seconds to use and call to output
+        timer = timer + Time.deltaTime;
+        seconds = (int)(timer % 60);
+        SetTime();
+
         //run out of lives
         if (lives == 0)
         {
+            //FINAL INSTANCE OF THEIR SCORE AND TIME
+            //CALL FIREBASE HERE WITH (score)
+            //CALL FIREBASE HERE WITH (seconds)
+
             //check to see if it is a high score
-            for(int i = 0;i < 5;i++)
+            for (int i = 0;i < 5;i++)
             {
                 if(score > highscores[i])
                 {
@@ -56,11 +61,6 @@ public class Player_Script : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("highscore" + k, highscores[k]);
             }
-
-            //store in JSON file to analyze
-            myScores myScore = new myScores();
-            myScore.score = score;
-            string json = JsonUtility.ToJson(myScore);
 
             //stop updating
             enabled = false;
@@ -125,8 +125,15 @@ public class Player_Script : MonoBehaviour {
             Debug.Log("error with lives");
         }
     }
+    //changes the score on UI
     private void SetScore()
     {
         CountText.text = "Score: " + score.ToString();
+    }
+    //changes the time on UI
+    private void SetTime()
+    {
+        Debug.Log(seconds);
+        TimerText.text = seconds.ToString();
     }
 }
